@@ -1,0 +1,133 @@
+= SAÉ 2.02
+:toc: left
+:toc-title: Sommaire
+:toclevels: 1
+:toc!:
+:icons: font
+:numbered:
+
+== Auteur(s)
+
+=== Du sujet...
+- mailto:yahn.formanczak@univ-tlse2.fr[Yahn Formanczak]
+- Version: 2025.01 (BUT1 2025)
+- Durée :  18 heures (1 TD et 4 TP encadrés, 7 créneaux en autonomie)
+
+=== De la solution...
+* Nom : DOE
+* Prénom : John
+* Groupe TD : 
+- [ ] 1
+- [x] 2
+- [ ] 3
+- [ ] 4
+
+== Objectifs
+
+L'objectif de cette SAÉ (**S**ituation d'**A**pprentissage et d'**É**valuation) est d'approfondir la réflexion sur l'approche algorithmique des problèmes rencontrés pendant les phases de développement.
+
+Plus précisément :
+
+  - Participer à un petit "concours" de codage
+  - Lire, comprendre et évaluer un code qui n'est pas le sien
+  - Comparer des algorithmes sur un critère précis
+  - Justifier de manière objective ses comparaisons et son classement
+
+
+
+== Description
+
+Cette SAÉ se déroule en 2 phases.
+
+=== Phase 1 : concours d'algorithme (25% seulement de la note)
+
+Vous allez devoir soumettre individuellement un algorithme qui résout un problème simple (niveau BUT S1) mais qui peut se régler avec plusieurs solutions différentes. 
+Vous avez la semaine 24 (encadrée, et questions sur Discord bienvenues pendant les séances libres) pour réaliser et soumettre votre (ou vos) solutions. 
+
+Les *contraintes* sont les suivantes :
+
+- votre algorithme doit être écrit en Java
+- il doit permettre aux test JUnit fournis de passer (respect donc des noms de classes, méthodes ou fonctions en conséquence). Le choix du nom de la fonction n'est donc pas libre!
+- le texte à compresser est donné sous forme d'une chaîne de caractères (sans accents pour éviter les soucis)
+- le texte compressé est aussi retourné sous forme d'une chaîne de caractères.
+
+Vu qu'il existe de nombreuses façons de résoudre ce problème, vous devrez soumettre, pour chaque catégorie, votre meilleure solution.
+
+Simplicité::
+  Ici il s'agit de faire un code facile à maintenir, lisible par des humains.  Pas forcément efficace, mais très facile à lire et à réutiliser. Toute méthode de `java.util` existante est autorisée.
+
+Efficacité::
+  Peu importe le code source, c'est l'efficacité de son exécution qui est recherchée (complexité maîtrisée, temps d'exécution minimal, ...). 
+Ici aucune méthode complexe (de type `split()` ou `sort()`) ne devra être utilisée (contrairement à celles de type `size()` ou `length()` qui sont autorisées).
+
+Sobriété numérique::
+  L'algorithme consomme le moins de ressources possible (mémoire, calcul, ...).
+
+NOTE: Vous pouvez soumettre plusieurs algorithmes dans plusieurs catégories pour maximiser vos chances de gagner le concours et obtenir des points bonus.
+
+
+== Généralités, notation de la SAÉ et résultat du concours
+
+=== Généralités
+
+- Vous pouvez vous entraider pour les outils d'analyse et de performance, voire vous inspirer de ChatGPT
+- N'hésitez pas à solliciter vos enseignants des ressources impliquées par cette SAÉ (salon https://discord.com/channels/357245708014977034/1105770228589277224[#sae_2_02_qualité] du serveur discord).
+
+
+
+=== Phase 2 : comparaison et évaluation des solutions
+
+Dans cette deuxième phase, (avec séances encadrées et libres), vous devrez comparer des solutions entre elles, et les classer en justifiant vos analyses.
+
+WARNING: Cette deuxième phase est en binôme (de votre choix)
+
+Vous vous verrez affecter, pour *chaque* catégorie d'algorithmes (Simplicité, Efficacité, Sobriété) un certain nombre de solutions au hasard parmi celles soumises en phase 1.
+
+Il vous faudra évaluer chaque algorithme selon des critères et les classer ensuite.
+
+NOTE: On vous impose au minimum les critères ci-dessous mais vous pourrez en rajouter.
+À vous de les utiliser judicieusement pour les catégories les plus appropriées.
+
+=== Critères de comparaison
+
+Lisibilité du code::
+  Ce critère est subjectif. Il se base sur la facilité à comprendre ce que fait le code.
+Qualité du code::
+  Vous utiliserez des outils open source de mesure de qualité de code (e.g., {codacy}).
+Efficacité::
+  Il s'agit d'évaluer la complexité algorithmique de la solution (`O(n^2)` ou `O(nlog(n))`). Si on double par exemple la taille de la donnée en entrée, est-ce qu'on double le temps de calcul ?
+Sobriété numérique::
+  Cela devient un critère de plus en plus important. Certains outils permettent de donner une mesure de la consommation en ressources d'un algorithme (e.g., {joular}).
+Temps d'exécution::
+  Il s'agit de mesurer le temps d'exécution.
++
+WARNING: Il conviendra de prendre des mesures sur des données plus ou moins grandes, certains algorithmes étant plus rapides que d'autres en fonction de la taille des données en entrée (beaucoup de mots dans la chaîne initiale), ou de leur variété (beaucoup de grands mots).
+
+== Livrables
+
+=== Phase 1 (deadline : **vendredi 6 juin 2025** à 19h)
+
+* [ ] Votre ou vos algorithmes dans les dépôts adéquats sur Webetud
+
+=== Phase 2 (deadline : **vendredi 20 juin 2025** à 19h)
+
+* [ ] Le rapport d'évaluation des algorithmes en PDF. Pour chaque catégorie, vous devrez désigner qui est 1er, 2ème, 3ème, ... (avec possibilité d’ex-aequo si le hasard vous a attribué des algos similaires). A rendre sur Webetud.
+* [ ] Les références des librairies/outils utilisés (pour ceux non fournis). Elles doivent être listées dans votre rapport dans un chapitre associé.
+* [ ] Un fichier Excel reprenant le classement des différents algorithmes sur Webetud (pour que vos évaluations soient prises en compte dans le classement général).
+* [ ] Les codes de test, d'évaluation ou de mesure. Ils doivent se trouver dans le répertoire `analyse` de votre dépôt.
+
+
+WARNING: Les répertoires et fichiers existants devront être complétés et mis à jour sans être renommés. Les binaires de compilation (répertoire `bin` ou `target` par exemple) ne devront pas être poussés sur le dépôt.
+
+
+
+=== Notation
+
+- **75%** de la notation portera sur votre rapport de la phase 2 et vos analyses (véracité, pertinence, qualité, ajout de critères pertinents, ...).
+- **25%** de la notation portera sur le classement de votre algorithme de la phase 1 (pertinence de la catégorie choisie, évaluation/classement par les pairs, ...)
+- **Bonus** pour les 10 premiers de chaque catégorie du concours de codage
+- **Bonus** pour ceux qui auront proposés plusieurs algos différents (indépendamment de leur classement final)
+- **Bonus** la catégorie, juste pour le fun : le concours du code source le plus compact.
+Ainsi, si vous pensez avoir le fichier source le plus compact (le moins gros en taille), envoyez-moi en MP sur Discord (Yahn Formanczak) lors d'un nouveau dépôt afin de pouvoir annoncer sur le canal le nouveau score à battre.
+
+
